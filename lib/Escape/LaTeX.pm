@@ -1,7 +1,7 @@
-# ABSTRACT: escape characters from supplied text so they are suitable for passing to LaTeX
 use strict;
 use warnings;
 package Escape::LaTeX;
+# ABSTRACT: escape characters from supplied text so they are suitable for passing to LaTeX.
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(escape_latex);

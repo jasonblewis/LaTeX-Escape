@@ -1,8 +1,7 @@
 use Test::More;
 
-
 BEGIN { use_ok('Escape::LaTeX') }
-#require_ok( 'Some::Module' );
+require_ok( 'Escape::LaTeX' );
 
 is( escape_latex("\r"), ' ',"replace Ctrl-m with space");
 
@@ -19,9 +18,9 @@ is( escape_latex("è"),'\\`{e}', 'e grave');
 
 is( escape_latex("ê"),'\\^{e}', 'e circumflex');
 
-is( escape_latex("Smith et al. claim that..."),'Smith et al.\\ claim that...',"avoid extra space after full stop in abbreviations");
+is( escape_latex("Smith et al. claim that..."),'Smith et al.\\ claim that...',"avoid extra white space after full stop in abbreviations");
 
-is( escape_latex("Pentium III. This"),'Pentium III\@. This',"ensure extra space after sentence that ends in a capital");
+is( escape_latex("Pentium III. This"),'Pentium III\@. This',"ensure extra white space after sentence that ends in a capital");
 
 is( escape_latex('\'hello\''),'`hello\'',"open single quote converted to backtick");
 is( escape_latex('"hello"'),'``hello"',"open double quote converted to double backtick");
