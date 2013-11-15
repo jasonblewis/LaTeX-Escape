@@ -2,3 +2,8 @@
 ABSTRACT: escape characters from supplied text so they are suitable for passing to LaTeX.
 * Testing: 
 dzil test
+* TODO use TeX::Encode or LaTeX::Encode for escaping charactrers
+* Prior Art
+There are a number of projects that do similar:
+
+[[http://search.cpan.org/~timbrody/TeX-Encode-1.3/lib/TeX/Encode.pm][TeX-Encode]] and [[http://search.cpan.org/~andrewf/LaTeX-Encode-0.08/lib/LaTeX/Encode.pm][LaTeX-Encode]]
