@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-package Escape::LaTeX;
+package LaTeX::Escape;
 # ABSTRACT: escape characters from supplied text so they are suitable for passing to LaTeX.
 
 our @ISA = qw(Exporter);
