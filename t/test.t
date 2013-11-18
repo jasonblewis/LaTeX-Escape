@@ -1,7 +1,7 @@
 use Test::More;
 
-BEGIN { use_ok('Escape::LaTeX') }
-require_ok( 'Escape::LaTeX' );
+BEGIN { use_ok('LaTeX::Escape') }
+require_ok( 'LaTeX::Escape' );
 
 is( escape_latex("\r"), ' ',"replace Ctrl-m with space");
 
