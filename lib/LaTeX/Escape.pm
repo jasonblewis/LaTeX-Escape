@@ -1,8 +1,9 @@
 use strict;
 use warnings;
 use utf8;
-no utf8;
+
 package LaTeX::Escape;
+
 # ABSTRACT: escape characters from supplied text so they are suitable for passing to LaTeX.
 
 use base "Exporter";
@@ -21,7 +22,7 @@ sub escape_latex {
     $returnstr =~ s/([%&\$\\])/\\$1/g;
 
     # turn the degree symbol into a degree symbol
-    $returnstr =~ s/\xB0/\\degree /g;
+    $returnstr =~ s/°/\\degree /g;
 
     # turn the é into a real é
     $returnstr =~ s/é/\\'{e}/g;
@@ -65,7 +66,7 @@ sub escape_latex {
     }
 
     return $returnstr;
-  }
+}
 
 
 1;
