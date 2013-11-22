@@ -1,7 +1,7 @@
 use Test::More;
+use utf8;
 
-BEGIN { use_ok('Escape::LaTeX') }
-require_ok( 'Escape::LaTeX' );
+BEGIN { use_ok('LaTeX::Escape') }
 
 is( escape_latex("\r"), ' ',"replace Ctrl-m with space");
 
@@ -10,7 +10,7 @@ is( escape_latex('&'), '\\&',"escape &");
 is( escape_latex('$'), '\\$','escape $');
 is( escape_latex('\\'), '\\\\','escape \\');
 
-is( escape_latex("\xB0"),'\\degree ', 'degree symbol converted to \\degree ');
+is( escape_latex("°"),'\\degree ', 'degree symbol converted to \\degree ');
 
 is( escape_latex("é"),'\\\'{e}', 'e acute');
 
@@ -35,3 +35,7 @@ is( escape_latex('but not if its a dash - between words'),'but not if its a dash
 is( escape_latex('<latex>LaTeX'),'\\LaTeX',"escape the escape");
 
 done_testing;
+
+# Local Variables:
+# mode: cperl
+# End:
