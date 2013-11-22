@@ -1,4 +1,4 @@
-* LaTeX::Escape
+* Escape::LaTeX
 ABSTRACT: escape characters from supplied text so they are suitable for passing to LaTeX.
 * Testing: 
 dzil test
